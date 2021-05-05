@@ -359,12 +359,12 @@ void draw() {
     }
 
     //hole detect
-    /*for (int i=0; i<number; i++) {
-      if (groundhogY+81>emptySoilY[i]&&groundhogY+81<emptySoilY[i]+80&&groundhogX+1>emptySoilX[i]&&groundhogX+1<emptySoilX[i]+80) {
+    for (int i=0; i<number; i++) {
+      if (groundhogY+80==emptySoilY[i]&&groundhogX==emptySoilX[i]) {
         down=15;
       }
     }
-    */
+    
     
     // Player
     //groundhog move
@@ -373,6 +373,7 @@ void draw() {
       floorSpeed -=1;
       if (down == 1) {
         downMove = round(step/frames*floorSpeed);
+        //print(downMove);
         image(groundhogIdle, groundhogX, groundhogY);
       } else {
         downMove = step/frames*floorSpeed;
