@@ -373,7 +373,6 @@ void draw() {
       floorSpeed -=1;
       if (down == 1) {
         downMove = round(step/frames*floorSpeed);
-        //print(downMove);
         image(groundhogIdle, groundhogX, groundhogY);
       } else {
         downMove = step/frames*floorSpeed;
@@ -434,7 +433,6 @@ void draw() {
 
     //soldierDetect
     for (int i=0; i<6; i++) {
-      // soldierY[i] = soldierY[i] +downMove;
       if (groundhogX < soldierX[i] + 80 && groundhogX + 80 > soldierX[i] && groundhogY < soldierY[i] + 80 && groundhogY + 80 > soldierY[i]) {
         groundhogX = 320;
         groundhogY = 80;
