@@ -449,7 +449,7 @@ void draw() {
     for (int i=0; i<6; i++) {
       cabbageY[i] = initCabbageY[i] + downMove; 
       image(cabbage, cabbageX[i], cabbageY[i]);
-      if (groundhogX < cabbageX[i] + 80 && groundhogX + 80 > cabbageX[i] && groundhogY < cabbageY[i] + 80 && groundhogY + 80 > cabbageY[i]) {
+      if (groundhogX < cabbageX[i] + 80 && groundhogX + 80 > cabbageX[i] && groundhogY < cabbageY[i] + 80 && groundhogY + 80 > cabbageY[i]&&playerHealth < PLAYERHEALTH_MAX) {
         cabbageX[i] = -80;
         cabbageY[i] = 0;
         playerHealth +=1 ;
